@@ -40,8 +40,18 @@
         <section>
             <h2>Dog Form</h2>
             <form action="#">
-                <label><input type="radio" name="indoor-outdoor" id="indoor" value="indoor"> Indoor</label>
-                <label><input type="radio" name="indoor-outdoor" id="outdoor" value="outdoor"> Outdoor</label>
+                <fieldset>
+                    <legend>Is your dog an indoor or outdoor dog?</legend>
+                    <label><input type="radio" name="indoor-outdoor" id="indoor" value="indoor"> Indoor</label>
+                    <label><input type="radio" name="indoor-outdoor" id="outdoor" value="outdoor"> Outdoor</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>What's your dog's personality?</legend>
+                    <input type="checkbox" name="personality" id="loving" value="loving"><label for="loving">Loving</label>
+                    <input type="checkbox" name="personality" id="lazy" value="lazy"><label for="lazy">Lazy</label>
+                    <input type="checkbox" name="personality" id="energetic" value="energetic" ><label for="energetic">Energetic</label>
+                </fieldset>
         
                 <input type="text" placeholder="dog photo url" name="dogphotourl" required>
                 <button type="submit">Submit</button>
