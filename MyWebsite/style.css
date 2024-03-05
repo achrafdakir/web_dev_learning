@@ -34,7 +34,7 @@ header ul p{
 }
 .social-icons a{
     color: #333;
-    font-size: 1.7em;
+    font-size: 1.8em;
     padding-right: 20px;
 }
 
@@ -52,11 +52,11 @@ header ul p{
 /*Skills*/
 
 .left{
-    width: 20%;
+    width: 25%;
     float: left;
 }
 .right{
-    width: 80%;
+    width: 75%;
     float: right;
 }
 
@@ -86,10 +86,27 @@ li{
 }
 .java{
     width: 80%;
+    animation: java 2s;
 }
-.python{
-    width: 80%;
-}
+
 .html{
     width: 70%;
+    animation: html 2s;
+}
+
+@keyframes java {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
 }
