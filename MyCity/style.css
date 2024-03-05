@@ -46,6 +46,10 @@ ul li a{
     font-weight: bold;
     margin-right: 20px;
 }
+ul li a:hover
+{
+    color: #14b388;
+}
 
 /*Main image*/
 #main-image{
@@ -67,7 +71,7 @@ ul li a{
     display: block;
     width: 120px;
     height: 50px;
-    background: #ff7a00;
+    background: #444;
     color: #fff;
     font-size: 20px;
     margin: 0 auto;
@@ -78,5 +82,5 @@ ul li a{
 }
 .button-1:hover
 {
-     background: #02b8dd;
+     background: #14b388;
 }
