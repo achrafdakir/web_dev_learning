@@ -116,6 +116,49 @@ li{
     }
 }
 
+.projects{
+    background-color: #333;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.projects h2{
+    color: #fff;
+    text-align: center;
+}
+.contenu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.project-card{
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 12em;
+    width: 20em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover{
+    transform: scale(1.1);
+}
+
+.project-img img{
+    width: 100%;    
+}
+
+.project-info{
+    margin-top: 0px;
+    padding: 0.5em 1em;
+}
+.project-info strong{
+    display: flex;
+    justify-content: space-between;
+}
 
 footer{
     width: 100%;
