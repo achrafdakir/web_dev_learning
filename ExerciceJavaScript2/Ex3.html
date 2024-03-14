@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculateur d'IMC</h1>
+    <div>
+        <label for="poids">Poids (kg): </label>
+        <input type="text" name="poids" id="poids">
+    </div>
+    <div>
+        <label for="taille">Taille (m): </label>
+        <input type="text" name="taille" id="taille">
+    </div>
+    <br>
+    <button onclick="calculer()" style="background-color: blue;color: white; width: 15em; height: 3em; border: none;"> Calculer</button>
+    <p id="resultat"></p>
+
+    <script>
+        function calculer(){
+            let p = parseFloat(document.querySelector("#poids").value);
+            let t = parseFloat(document.querySelector("#taille").value);
+            let imc = p / (t*t);
+            let etat = "";
+            if (imc > 40){
+                etat = "obésité morbide";
+            }else if(imc > 35){
+                etat = "obésité sévère";
+            }else if(imc > 30){
+                etat = "obésité modérée";
+            }else if(imc > 25){
+                etat = "surpoids";
+            }else if(imc > 18.5){
+                etat = "corpulence normale";
+            }else{
+                etat = "maigreur";
+            }
+            document.querySelector("#resultat").innerHTML = "Votre IMC est de "+imc.toFixed(1)+". Vous etes en état "+etat;
+
+        }
+    </script>
+</body>
+</html>
