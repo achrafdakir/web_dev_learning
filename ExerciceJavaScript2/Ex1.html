@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercie 1</title>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="text" id="text2">
+    <button onclick="permuter()">Permuter</button>
+    
+    <script>
+        function permuter(){
+            let txt1 = document.querySelector("#text1").value;
+            let txt2 = document.querySelector("#text2").value;
+            let tmp;
+            tmp = txt1;
+            txt1 = txt2;
+            txt2 = tmp;
+            document.querySelector("#text1").value = txt1;
+            document.querySelector("#text2").value = txt2;
+        }
+    </script>
+</body>
+</html>
