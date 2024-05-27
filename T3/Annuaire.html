@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annuaire Téléphonique</title>
+</head>
+<body>
+
+<script>
+    const annuaire = {};
+
+    function afficherNumero() {
+        const nom = prompt("Entrez le nom de votre ami :");
+        const numero = annuaire[nom];
+
+        if (numero) {
+            alert(`Le numéro de téléphone de ${nom} est : ${numero}`);
+        } else {
+            alert(`Le numéro de téléphone de ${nom} n'est pas trouvé dans l'annuaire.`);
+        }
+    }
+
+    function rechercherNumero() {
+        const nom = prompt("Entrez le nom à rechercher :");
+        const numero = annuaire[nom];
+
+        if (numero) {
+           alert(`Le numéro de téléphone de ${nom} est : ${numero}`);
+        } else {
+            alert(`Le numéro de téléphone de ${nom} n'est pas trouvé dans l'annuaire.`);
+        }
+    }
+
+    function listerContacts() {
+    let message = "";
+    for (const [nom, numero] of Object.entries(annuaire)) {
+        message += `${nom} : ${numero}\n`;
+    }
+    if(message==""){
+       alert("Liste Contact est vide  ")
+    }else{
+        
+        alert("Liste des noms et numéros dans l'annuaire :\n"+message);
+    }
+
+    
+}
+
+
+    function ajouterContact() {
+        const nom = prompt("Entrez le nom du nouveau contact :");
+        const numero = prompt(`Entrez le numéro de téléphone de ${nom} :`);
+        annuaire[nom] = numero;
+        alert(`${nom} a été ajouté à l'annuaire avec le numéro ${numero}.`);
+    }
+
+    function supprimerContact() {
+        const nom = prompt("Entrez le nom du contact à supprimer :");
+        if (annuaire[nom]) {
+            delete annuaire[nom];
+            alert(`${nom} a été supprimé de l'annuaire.`);
+        } else {
+            alert(`${nom} n'est pas trouvé dans l'annuaire.`);
+        }
+    }
+
+    let choix;
+    do {
+        choix = prompt("Choisissez une option : (r) Rechercher, (b) Liste, (a) Ajouter, (s) Supprimer, (q) Quitter");
+
+        switch (choix) {
+            case 'r':
+                rechercherNumero();
+                break;
+            case 'b':
+                listerContacts();
+                break;
+            case 'a':
+                ajouterContact();
+                break;
+            case 's':
+                supprimerContact();
+                break;
+            case 'q':
+                alert("Au revoir !");
+                break;
+            default:
+                alert("Option non valide. Veuillez réessayer.");
+        }
+    } while (choix !== 'q');
+</script>
+
+</body>
+</html>
